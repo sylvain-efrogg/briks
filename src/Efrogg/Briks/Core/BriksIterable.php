@@ -1,16 +1,15 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: carapuce
+ * User: raph
  * Date: 19/05/17
- * Time: 09:21
+ * Time: 15:36
  */
 
 namespace Efrogg\Briks\Core;
 
 
-
-interface BriksRenderableInterface
+interface BriksIterable extends \Iterator
 {
 
 }

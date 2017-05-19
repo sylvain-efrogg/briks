@@ -9,7 +9,7 @@
 namespace Efrogg\Briks\Core;
 
 
-class BriksFieldNode extends BriksField implements BriksRenderableInterface
+class BriksFieldNode extends BriksField implements BriksRenderableInterface, BriksIterable
 {
 
     /** @var  BriksNode */

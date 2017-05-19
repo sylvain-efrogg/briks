@@ -7,7 +7,7 @@ namespace Efrogg\Briks\Core;
  * Date: 19/05/17
  * Time: 09:04
  */
-class BriksNode
+class BriksNode implements BriksRenderableInterface
 {
     /**
      * @var BriksField[]
