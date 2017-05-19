@@ -25,7 +25,7 @@ class BriksRendererTwig extends BriksRenderer
     public function setTwigEnvironment(\Twig_Environment $twig)
     {
         $renderer = $this;
-        $twig -> addFunction(new Twig_Function("render",function($node) use ($renderer) {
+        $twig -> addFunction(new Twig_Function("briks",function($node) use ($renderer) {
             return $renderer->render($node);
         }));
 
