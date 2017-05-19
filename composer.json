@@ -1,0 +1,20 @@
+{
+    "name": "efrogg/briks",
+    "type": "library",
+    "description": "moteur de rendu de contenus hiérarchisés",
+    "keywords": [],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Raphaël HOMANN",
+            "email": "raph@e-frogg.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "twig/twig"
+    },
+    "autoload": {
+        "psr-4": { "Efrogg\\Brik\\": "src/Efrogg/Brik/" }
+    }
+}
