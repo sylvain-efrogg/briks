@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: carapuce
- * Date: 19/05/17
- * Time: 09:06
- */
-
 namespace Efrogg\Briks\Core;
 
 
@@ -35,8 +28,9 @@ class BriksFieldNodeCollection extends BriksField implements BriksRenderableInte
     }
 
 
-    public function addNode(BriksNode $node) {
-        $this->content[]=$node;
+    public function addNode(BriksNode $node)
+    {
+        $this->content[] = $node;
     }
 
 
@@ -93,6 +87,6 @@ class BriksFieldNodeCollection extends BriksField implements BriksRenderableInte
      */
     public function rewind()
     {
-        $this->position=0;
+        $this->position = 0;
     }
 }

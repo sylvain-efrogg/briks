@@ -1,12 +1,6 @@
 <?php
-
 namespace Efrogg\Briks\Core;
-/**
- * Created by PhpStorm.
- * User: carapuce
- * Date: 19/05/17
- * Time: 09:04
- */
+
 class BriksNode implements BriksRenderableInterface
 {
     /**
@@ -20,29 +14,28 @@ class BriksNode implements BriksRenderableInterface
     protected $nodeType;
 
 
-
     /**
      * BriksNode constructor.
      * @param array $fields
      */
-    public function __construct(array $data = [],BriksNodeType $nodeType)
+    public function __construct(array $data = [], BriksNodeType $nodeType)
     {
         $this->nodeType = $nodeType;
         foreach ($data as $fieldName => $content) {
-            if($content instanceof BriksField) {
+            if ($content instanceof BriksField) {
                 $this->addField($content);
             } else {
-                $this->addField(new BriksField($fieldName,$content));
+                $this->addField(new BriksField($fieldName, $content));
             }
         }
     }
 
 
-
     /**
      * @param BriksField $field
      */
-    public function addField(BriksField $field) {
+    public function addField(BriksField $field)
+    {
         $this->fields[$field->getName()] = $field;
     }
 

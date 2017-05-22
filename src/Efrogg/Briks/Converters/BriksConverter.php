@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: carapuce
- * Date: 19/05/17
- * Time: 11:15
- */
-
 namespace Efrogg\Briks\Converters;
 
 
@@ -48,6 +41,7 @@ abstract class BriksConverter
     public function setFactory($factory)
     {
         $this->factory = $factory;
+
         return $this;
     }
 
@@ -58,6 +52,7 @@ abstract class BriksConverter
     public function setData($data)
     {
         $this->data = $data;
+
         return $this;
     }
 

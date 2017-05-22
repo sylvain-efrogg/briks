@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: carapuce
- * Date: 19/05/17
- * Time: 09:19
- */
-
 namespace Efrogg\Briks\Core;
 
 
@@ -24,7 +17,6 @@ class BriksFieldNode extends BriksField implements BriksRenderableInterface, Bri
         parent::__construct($name, $node);
         $this->content = $node;
     }
-
 
 
     /**

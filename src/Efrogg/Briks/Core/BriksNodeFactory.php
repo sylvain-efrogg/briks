@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: carapuce
- * Date: 19/05/17
- * Time: 11:04
- */
-
 namespace Efrogg\Briks\Core;
 
 
@@ -35,12 +28,13 @@ class BriksNodeFactory
         $this->types[$nodeType->getIdentifier()] = $nodeType;
     }
 
-    public function getType($identifier) {
-        if(!isset($this->types[$identifier]) && !is_null($this->factory)) {
-            $this->types[$identifier] = call_user_func($this->factory,$identifier);
+    public function getType($identifier)
+    {
+        if (!isset($this->types[$identifier]) && !is_null($this->factory)) {
+            $this->types[$identifier] = call_user_func($this->factory, $identifier);
         }
 
-        if(isset($this->types[$identifier])) {
+        if (isset($this->types[$identifier])) {
             return $this->types[$identifier];
         }
 
@@ -54,6 +48,7 @@ class BriksNodeFactory
     public function setFactory($factory)
     {
         $this->factory = $factory;
+
         return $this;
     }
 }
