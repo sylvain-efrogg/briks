@@ -19,12 +19,15 @@ class BriksFieldNodeCollection extends BriksField implements BriksRenderableInte
     /**
      * BriksField constructor.
      * @param string $name
-     * @param $content
+     * @param BriksNode[] $content
      */
     public function __construct($name, array $content)
     {
         //TODO : check children
-        parent::__construct($name, $content);
+        parent::__construct($name, []);
+        foreach ($content as $oneContent) {
+            $this->addNode($oneContent);
+        }
     }
 
 
