@@ -6,6 +6,7 @@ use Efrogg\Briks\Core\BriksFieldNode;
 use Efrogg\Briks\Core\BriksFieldNodeCollection;
 use Efrogg\Briks\Core\BriksFieldNodeInterface;
 use Efrogg\Briks\Core\BriksNode;
+use Michelf\Markdown;
 use Twig_Function;
 
 class BriksRendererTwig extends BriksRenderer
@@ -22,10 +23,12 @@ class BriksRendererTwig extends BriksRenderer
             new Twig_Function(
                 "briks", function ($node) use ($renderer) {
                 return $renderer->render($node);
-            }
-            )
+            })
         );
 
+        $twig->addFilter(new \Twig_Filter("markdown",function($str) {
+            return Markdown::defaultTransform($str);
+        }));
         $this->twig_environment = $twig;
 
     }
