@@ -73,4 +73,17 @@ class BriksFieldNode extends BriksField implements BriksRenderableInterface, Bri
     {
     }
 
+    function __isset($fieldName)
+    {
+        dump($fieldName);
+        return $this->content->hasField($fieldName);
+    }
+
+    function __get($fieldName)
+    {
+        // getImage => image
+        return $this->content->getField($fieldName);
+    }
+
+
 }

@@ -9,11 +9,12 @@ class BriksArrayConverter extends BriksConverter
 
 
     /**
-     * @param $source
+     * @param $data
      * @return BriksNode
      */
-    public function convert()
+    public function convert($data)
     {
+        // ok je m'y mets
         // TODO: Implement convert() method.
     }
 

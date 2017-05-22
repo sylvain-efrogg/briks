@@ -6,7 +6,7 @@ use Efrogg\Briks\Core\BriksField;
 use Efrogg\Briks\Core\BriksFieldNode;
 use Efrogg\Briks\Core\BriksFieldNodeCollection;
 use Efrogg\Briks\Core\BriksNode;
-use Efrogg\Briks\Core\BriksNodeFactory;
+use Efrogg\Briks\Core\BriksNodeTypeFactory;
 use Efrogg\Briks\Core\BriksNodeType;
 use Efrogg\Briks\Core\BriksRenderer;
 use Efrogg\Briks\Renderers\BriksRendererTwig;
@@ -38,7 +38,7 @@ class TestBriks
         $typeGalerie = new BriksNodeType("gallery");
         $typeGalerie->setTemplate("gallery.twig");
 
-        $nodeFactory = new BriksNodeFactory();
+        $nodeFactory = new BriksNodeTypeFactory();
 //        $nodeFactory->addType($typeImage);
         $nodeFactory->addType($typeColonnes);
         $nodeFactory->addType($typeGalerie);
@@ -76,9 +76,9 @@ class TestBriks
 
         $converter = new BriksArrayConverter();
         $converter
-            ->setFactory($nodeFactory)
-            ->setData($data_array);
-        $rootNode = $converter->convert();  // TODO
+            ->setFactory($nodeFactory);
+//            ->setData($data_array);
+        $rootNode = $converter->convert($data_array);  // TODO
 
 
         $data = [

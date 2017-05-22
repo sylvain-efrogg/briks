@@ -4,7 +4,7 @@ namespace Efrogg\Briks\Core;
 
 use Efrogg\Briks\Core\Exceptions\TypeNotFoundException;
 
-class BriksNodeFactory
+class BriksNodeTypeFactory
 {
     /**
      * @var BriksNodeType[]
@@ -43,7 +43,7 @@ class BriksNodeFactory
 
     /**
      * @param callable $factory
-     * @return BriksNodeFactory
+     * @return BriksNodeTypeFactory
      */
     public function setFactory($factory)
     {

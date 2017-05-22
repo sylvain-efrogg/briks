@@ -63,4 +63,32 @@ class BriksNode implements BriksRenderableInterface
     {
         return $this->fields;
     }
+
+    /**
+     * @return BriksField
+     */
+    public function getField($Field_name)
+    {
+        return $this->fields[$Field_name];
+    }
+
+    /**
+     * @return bool
+     */
+    public function hasField($Field_name)
+    {
+        return array_key_exists($Field_name,$this->fields);
+    }
+
+    function __get($name)
+    {
+        return $this->getField($name);
+    }
+
+    function __isset($name)
+    {
+        return $this->hasField($name);
+    }
+
+
 }

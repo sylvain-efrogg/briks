@@ -12,7 +12,8 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "twig/twig":"^2.0"
+        "twig/twig":"^2.0",
+        "michelf/php-markdown": "^1.7"
     },
     "autoload": {
         "psr-4": { "Efrogg\\Briks\\": "src/Efrogg/Briks/" }
