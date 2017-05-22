@@ -76,9 +76,9 @@ class TestBriks
 
         $converter = new BriksArrayConverter();
         $converter
-            ->setFactory($nodeFactory)
-            ->setData($data_array);
-        $rootNode = $converter->convert();  // TODO
+            ->setFactory($nodeFactory);
+//            ->setData($data_array);
+        $rootNode = $converter->convert($data_array);  // TODO
 
 
         $data = [

@@ -15,16 +15,10 @@ abstract class BriksConverter
 
 
     /**
-     * @var array;
-     */
-    protected $data;
-
-
-    /**
-     * @param $source
+     * @param $data
      * @return BriksNode
      */
-    abstract public function convert();
+    abstract public function convert($data);
 
     /**
      * @return BriksNodeTypeFactory
@@ -44,17 +38,5 @@ abstract class BriksConverter
 
         return $this;
     }
-
-    /**
-     * @param array $data
-     * @return self
-     */
-    public function setData($data)
-    {
-        $this->data = $data;
-
-        return $this;
-    }
-
 
 }
