@@ -3,13 +3,13 @@ namespace Efrogg\Briks\Converters;
 
 
 use Efrogg\Briks\Core\BriksNode;
-use Efrogg\Briks\Core\BriksNodeFactory;
+use Efrogg\Briks\Core\BriksNodeTypeFactory;
 
 abstract class BriksConverter
 {
 
     /**
-     * @var BriksNodeFactory
+     * @var BriksNodeTypeFactory
      */
     protected $factory;
 
@@ -27,7 +27,7 @@ abstract class BriksConverter
     abstract public function convert();
 
     /**
-     * @return BriksNodeFactory
+     * @return BriksNodeTypeFactory
      */
     public function getFactory()
     {
@@ -35,10 +35,10 @@ abstract class BriksConverter
     }
 
     /**
-     * @param BriksNodeFactory $factory
+     * @param BriksNodeTypeFactory $factory
      * @return self
      */
-    public function setFactory($factory)
+    public function setFactory(BriksNodeTypeFactory $factory)
     {
         $this->factory = $factory;
 
