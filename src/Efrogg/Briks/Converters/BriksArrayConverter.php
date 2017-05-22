@@ -14,6 +14,7 @@ class BriksArrayConverter extends BriksConverter
      */
     public function convert()
     {
+        // ok je m'y mets
         // TODO: Implement convert() method.
     }
 
