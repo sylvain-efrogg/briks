@@ -19,8 +19,11 @@ class BriksArrayConverter extends BriksConverter
     {
         foreach ($data['root'] as $key => $values) {
             foreach ($values as $field => $content) {
-                $type = new BriksNodeType($key);
-                $type->setTemplate($key . ".twig");
+                //TODO : tous les types depuis la factory
+
+                $type= $this->factory->getType($key);
+//                $type = new BriksNodeType($key);
+//                $type->setTemplate($key . ".twig");
 
                 // si c'est un groupe d'image alors je parse chaque image
                 if ($field == 'images') {
@@ -30,7 +33,7 @@ class BriksArrayConverter extends BriksConverter
                     return $brik;
                 }
 
-                // si le noeud est de type element je dois reconstruire les briks qui le compose
+                // si le noeud est de type elements je dois reconstruire les briks qui le compose
                 if ($field == 'elements') {
                         return $this->imbricatedNode($content,$field);
                 }
